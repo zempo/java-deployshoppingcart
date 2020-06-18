@@ -538,6 +538,10 @@ STATUS OK
   * [ ] Routes for CURL command
     * [ ] GET /users/myinfo
     * [ ] GET /carts/user
+  
+### Stretch Goal
+
+  * [ ] Routes for CURL command
     * [ ] POST /carts/create/product/1
     * [ ] PUT /carts/update/cart/1/product/1
     * [ ] DELETE /carts/delete/cart/1/product/1
