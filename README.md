@@ -2,12 +2,14 @@
 
 A Student that completes this project shows they can:
 
+* Switch between H2 and PostgreSQL databases
+* Deploy to a cloud service
 
 ## Introduction
 
-For this project we are starting with your ending project from [Shopping Cart](https://github.com/LambdaSchool/java-shoppingcart.git). We are going to deploy this project to Heroku.
+For this project, we are starting with your ending project from [Shopping Cart](https://github.com/LambdaSchool/java-shoppingcart.git). We are going to deploy this project to Heroku.
 
- A shopping cart is a very common application so let's look at one. This Java Spring REST API application will provide endpoints for clients to perform the various CRUD operations on data sets contained in the application's data. Access to these endpoints will be secured using OAuth2 Authentication.
+ A shopping cart is a common application so let's look at one. This Java Spring REST API application will provide endpoints for clients to perform the various CRUD operations on data sets contained in the application's data. Access to these endpoints will be secured using OAuth2 Authentication.
 
 ### Database layout
 
@@ -17,10 +19,10 @@ The table layout from your Shopping Cart Project should be
 
 All tables contain the following auditing fields
 
-* created_by - user name who created the row. Should default to SYSTEM
-* created_date - date field when the row was created
-* last_modified_by - user name who last changed data in the row. Should default to SYSTEM
-* last_modified_date - date field when the data in the row was last changed
+* createdby - user name who created the row. Should default to SYSTEM
+* createddate - date field when the row was created
+* lastmodifiedby - user name who last changed data in the row. Should default to SYSTEM
+* lastmodifieddate - date field when the data in the row was last changed
 
 Table Relationships include
 
@@ -40,11 +42,11 @@ To find out the endpoints available to you in the initial application, you will 
 ### MVP
 
 * [ ] Configure the application so that you can switch between the H2 database and the PostgreSQL database via a property in the application.properties files.
-  * [ ] PostgreSQL only has to work once the application is deployed to Heroku
-* [ ] Required Unit Testing.
-  * [ ] Write at least 2 unit tests for the Cart Items service (either with or without database use).
-  * [ ] Write at least 2 unit tests for the Cart Items controller (either with or without database use).
-* [ ] Deploy the system to Heroku using PostgreSQL.
+* [ ] Required Testing.
+  * [ ] Write at least 2 unit tests for the Cart Items service (without database use).
+  * [ ] Write at least 2 unit tests for the Cart Items controller (without database use).
+  * [ ] Write at least 2 integration tests for the Cart Items controller (with database use).
+* [ ] Deploy the system to Heroku.
   * [ ] Make sure that your data remains stable after Heroku automatically restarts your application each night (turn off seed data once the seed data is loaded).
   
 ### Stretch Goal
@@ -59,3 +61,6 @@ To find out the endpoints available to you in the initial application, you will 
     * [ ] POST /carts/create/product/1
     * [ ] PUT /carts/update/cart/1/product/1
     * [ ] DELETE /carts/delete/cart/1/product/1
+* [ ] Extend the unit tests for Cart Items service to 100% coverage
+* [ ] Extend the unit tests for Cart Items controller to 100% coverage
+* [ ] Extend the integration tests for the Cart Items controller to 100% coverage
